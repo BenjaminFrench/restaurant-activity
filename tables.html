@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tables Page</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <span class="glyphicon glyphicon-fire"></span>Hot Restaurant
+                <span class="glyphicon glyphicon-fire"></span>
+            </h1>
+            <h3>Make your reservation</h3>
+            <hr>
+            <a href="/reserve">
+                <button type="button" class="btn btn-danger btn-lg">
+                    <span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Current Reservations</h3>
+                    </div>
+                    <div class="panel-body" id="current-reservations">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Wait List</h3>
+                    </div>
+                    <div class="panel-body" id="wait-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
