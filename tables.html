@@ -48,3 +48,26 @@
         </div>
     </div>
 </body>
+<script type="text/javascript">
+
+    $.get("/api/tables", function (data) {
+        for (i = 0; i < data.length; i++) {
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "reservation-well-" + i);
+            $("#current-reservations").append(wellSection);
+            $("#reservation-well-" + i).append("<h2>" + data[i].uniqueID + "</h2>");
+        }
+    });
+
+    $.get("/api/waitlist", function (data) {
+        for (i = 0; i < data.length; i++) {
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "waitlist-well-" + i);
+            $("#wait-list").append(wellSection);
+            $("#waitlist-well-" + i).append("<h2>" + data[i].uniqueID + "</h2>");
+        }
+    })
+</script>
+</html>
