@@ -23,6 +23,10 @@
                 <button type="button" class="btn btn-danger btn-lg">
                     <span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button>
             </a>
+            <a href="/">
+                <button id="clear-button" type="button" class="btn btn-danger btn-lg">
+                    <span class="glyphicon glyphicon-remove"></span> Clear tables</button>
+            </a>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -68,6 +72,17 @@
             $("#wait-list").append(wellSection);
             $("#waitlist-well-" + i).append("<h2>" + data[i].uniqueID + "</h2>");
         }
+    })
+
+    $("#clear-button").on('click', function (event) {
+        event.preventDefault();
+        $.get("/api/clear", function (data) {
+            if (data === 'Cleared') {
+                $("#current-reservations").empty();
+                $("#wait-list").empty();
+                alert('Tables Cleared');
+            }
+        })
     })
 </script>
 </html>
