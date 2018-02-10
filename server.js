@@ -28,8 +28,6 @@ app.post("/api/new", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body-parser middleware
   var newtable = req.body;
-  // Using a RegEx Pattern to remove spaces from newtable
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
 
   console.log(newtable);
 
