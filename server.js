@@ -43,6 +43,14 @@ app.post("/api/new", function(req, res) {
   res.json(newtable);
 });
 
+app.get("/api/tables", function(req, res) {
+    return res.json(tables);
+});
+
+app.get("/api/waitlist", function(req, res) {
+    return res.json(waitlist);
+});
+
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
